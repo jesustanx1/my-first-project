@@ -1,0 +1,29 @@
+<script language="javascript">
+	document.write
+	var a
+	var output
+	for(a=1; a<1000; a++)
+	{
+		if(is_prime(a)==true)
+		{
+			output='<p>' + a + '</p>';
+			document.write(output)
+		}
+	}
+	
+	function is_prime(my_num)
+	{
+		var b;
+		var prime=true;
+		for( b=2; b<my_num; b++) /* here we are counting from 2 to one less than the given number, my_num */
+		{
+			if(my_num%b==0) /* if my_num can be divided by a given number (a) then it is no longer a prime number */
+			{
+				prime=false; /* set our prime is false */
+				break; /* since we have encountered a number that can divided the my_num, no need to continue with the other numbers. break; will exit the for loop */
+			}
+			
+		}
+		return prime;
+	}
+</script>

@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<table border="1">
+    	<tr>
+        	<td>Row 1 Col 1</td>
+            <td>ROw 1 Col 2</td>
+            <td>Row 1 Col 3</td>    
+        </tr>
+        <tr>
+        	<td>Row 2 Col 1</td>
+            <td>Row 2 Col 2</td>
+            <td>Row 2 Col 3</td>
+        </tr>
+        <tr>
+       	  <td colspan="3"> This column is spanned 3 columns</td>
+      </tr>
+    </table>
+	<div id="output">
+    </div>
+    <script language="javascript">
+		var bucket='';
+		var col,row,ans;
+		bucket=bucket + '<table border="1">';
+		bucket=bucket +	'	<tr>';
+		bucket=bucket +	'	<td colspan="20">MULTIPLICATION TABLE</td>';
+		bucket=bucket +	'	</tr>';
+		
+		bucket=bucket +	'	<tr>';
+		bucket=bucket +	'	<td></td>';
+		for(col=2; col<=20; col++)
+		{
+			bucket=bucket +	'	<td><b>' + col + '</b></td>';
+		}
+		bucket=bucket +	'	</tr>';
+		
+		for(row=2; row<=12; row++)
+		{
+			bucket=bucket +	'	<tr>';
+			bucket=bucket +	'	<td><b>' + row + '</b></td>';
+			for(col=2; col<=20; col++)
+			{
+				ans=row * col;
+				bucket=bucket + '	<td>' + ans + '</td>';
+			}
+			bucket=bucket +	'	</tr>';
+		}
+		bucket=bucket + '</table>';
+		document.getElementById('output').innerHTML=bucket;
+    </script>
+</body>
+</html>

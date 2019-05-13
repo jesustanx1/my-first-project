@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+	 <script language="javascript">
+	 	function isprime(number)
+		{
+			var c=number;
+			var b=2;
+			var prime=true;
+			
+			
+			while(b<c)
+			{
+					if(c%b==0)
+					{
+						prime=false;
+						break;
+					}
+					b=b+1;
+			}
+			return prime;
+		}
+		
+		
+			var start=1;
+			var end=1000;
+			for(start=1; start<end; start++)
+			{
+				if(isprime(start)==true)
+				{
+					document.write(start + "is a prime number!<br>");
+			}
+				else
+				{
+					document.write(start + "is NOT a prime number!<br>");
+				}
+			}
+     </script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Read a control</title>
+</head>
+
+<body>
+<label>Student Name:</label>
+<input id="student_name" name= "student_name" type="text" /> <br />
+
+<label>Gender:</label>
+<select id="gender" name="gender">
+	<option value=""></option>
+    <option value="Male">Male</option>
+    <option value="Female">Female</option>
+    </select>
+    <br />
+    <label>Age:</label>
+    <input id="age" name= "name" type="text" /> <br />
+    
+    <input type="button" value="Analyze Me" onclick="analyze_me_click()" />
+    <div id="result">
+    </div>
+    
+    <script language="javascript">
+	function analyze_me_click()
+	{
+		var studname=document.getElementById('student_name').value;
+		var gender=document.getElementById('gender').value;
+		var age=document.getElementById('age').value;
+		
+		if(studname=='')
+		{
+			alert("Please enter student name!");
+			document.getElementById('student_name').focus();
+			return null;	
+		}
+		if(gender=='')
+		{
+			alert("Please enter select gender!");
+			document.getElementById('gender').focus();
+			return null;	
+		}
+		if(age=='' || isNaN(age))
+		{
+			alert("Please enter a numeric value for Age!");
+			document.getElementById('age').focus();
+			return null;	
+		}
+		var sex;
+		if(gender=="Male")
+		{
+			sex="boy";
+		}
+		else
+		{
+			sex="girl";
+		}
+		var result="My name is " + studname + ". I am a" + sex + " and I am" + age + "years old.";
+		document.getElementById('result').innerHTML=result;
+	}
+    </script>
+
+
+    
+    
+
+
+
+</body>
+</html>

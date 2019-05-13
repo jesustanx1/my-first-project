@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+	<label>Enter number:</label>
+    <input id="numb" name="numb" type="text" />
+    <input type="button" value="Generate permutation" onclick="gen_perm()" />
+    <div id="output">
+    </div>
+    <script language="javascript">
+    function gen_perm()
+    {
+    	var a=document.getElementById('numb').value;
+		var b=0;
+		var c=2;
+		var output='';
+		var ans=0;
+		
+		if(a=='' || isNaN(a))
+		{
+			 alert("Enter a number!");
+			 document.getElementById('numb').focus();
+			 return null;
+		}
+		a=a*1;
+		
+		for(c=1; c<=a; c++)
+		{
+			if(isprime(c)==true)
+			{
+				ans=ans + c;
+				output= output + c + ' + ';
+			}
+			
+		}
+		output=output + ' = ' + ans;
+		document.getElementById('output').innerHTML=output;
+    }
+		
+		function isprime(number)
+		{
+			var c=number;
+			var b=2;
+			var prime=true;
+			
+			
+			while(b<c)
+			{
+					if(c%b==0)
+					{
+						prime=false;
+						break;
+					}
+					b=b+1;
+			}
+			return prime;
+		}
+	
+	</script>
+</body>
+</html>

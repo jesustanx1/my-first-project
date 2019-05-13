@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<label id="Number">
+	<input type="text" id="number" name="number" />
+</label>
+    <input type="button" value="check number" onclick="check_number()" />
+	<script>
+	function check_number()
+	{
+		var a=document.getElementById('number').value;
+		if(a=='' || isNaN(a))
+		{
+			alert("Please enter a number!");
+			document.getElementById('number').focus();
+			return null;
+		}
+		if(is_even(a)==true)
+			{
+			alert("This is an even number");
+			}
+		else
+		{
+			alert("This is an odd number");
+		}
+		
+		
+	}
+	function is_even(my_numb)
+	{
+		if(my_numb%2==0)
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
+	
+	
+    </script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Game2</title>
+</head>
+
+<body>
+<script language="javascript">
+function get_random(min_b, max_b)
+	
+{	
+	
+	 var b=Math.random() * (max_b-min_b) + min_b;
+	 b=Math.round(b)
+	 return b ;
+}
+	var b;
+	for(b%2!==0;b<=20;b++)
+	var first_no=get_random(1,20);
+ 	var second_no=get_random(1,20);
+ 	var sum=first_no+second_no;
+ 	var product=first_no*second_no;
+	
+</script>
+	<p align="center">
+		I am thinking of two odd numbers between 1 and 20
+		Their sum is <script language="javascript"> document.write(sum)</script>.<br />
+		Their product is <script language="javascript"> document.write(product)</script>.<br />
+		<b>What are the numbers?(Please enter the numbers in the space provided)</b>
+   </p>
+   <p align="center">
+   		1st Number =<input type="text" id="input_1st_no" name="input_1st_no" />
+        2nd Number =<input type="text" id="input_2nd_no" name="input_2nd_no" /><br />
+        <input type="button" value="Check My Answer" onclick="check_my_answer_click()" />
+   </p>
+   <script language="javascript">
+   function check_my_answer_click()
+   {
+	   var first_num= document.getElementById('input_1st_no').value;
+	   var second_num= document.getElementById('input_2nd_no').value;
+	   if(first_num=='' || isNaN(first_num))
+		{
+			alert("Please enter a number between 1 and 20!");
+			document.getElementById('input_1st_no').focus();
+			return null;
+			
+		}
+	   
+	   
+		if(second_num=='' || isNaN(second_num))
+		{
+			alert("Please enter a number between 1 and 20!");
+			document.getElementById('input_2nd_no').focus();
+			return null;
+			
+		}
+		if(( first_num==first_no || first_num==second_no) && (second_num==first_no || second_num==second_no))
+		{
+			alert("Congratulations!\n\nYou got it right");
+		}
+		else
+		{
+			alert("Sorry,You got it wrong. Try again!");
+		}
+   }
+   </script>
+
+</body>
+</html>

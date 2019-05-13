@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Exercise</title>
+</head>
+
+<body>
+<label>User name:</label>
+<input id="username" name="username" type="text" /><br />
+<br />
+
+<label>Password:</label>
+<input id="password" name="password" type="password" /> <br />
+<input id="signin" value="Sign in" type="button" onclick="signin_click()" />
+
+<script language="javascript">
+	var username= document.getElementById('username').value;
+	var password= document.getElementById('password').value;
+	
+	function signin_click()
+	{
+		username.length=6
+		var lu=username.length;
+		if(lu==' ')
+		 {
+			alert("username should not have space");
+			document.getElementById('username').focus();
+			return null;
+			
+		 }
+	 }
+		if(username=='')
+		{
+			alert("Please enter a user name");
+			document.getElementById('username').focus();
+			return null;
+			
+		}
+		if(username.length!=6)
+		{
+			alert("Please user name should be at least 6 characters");
+			document.getElementById('username').focus();
+			return null;
+			
+		}
+		if(password=='')
+		{
+			alert("Please enter a password");
+			document.getElementById('password').focus();
+			return null;
+			
+		}
+		if(password.length!=8)
+		{
+			alert("Please password should be at least 8 characters");
+			document.getElementById('password').focus();
+			return null;
+			
+		}
+		 if(lu==' ')
+		 {
+			alert("username should not have space");
+			document.getElementById('username').focus();
+			return null;
+			
+		 }
+		alert("Your username is <inputed username> your password is <inputed password>");
+		
+	}
+
+</script>
+
+
+
+</body>
+</html>

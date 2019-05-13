@@ -1,0 +1,107 @@
+.css {
+}
+#submenu h3 a {
+	padding: 10px;
+	background-color: #999;
+	color: #FFF;
+	text-decoration: none;
+}
+.font12 {
+	font-size: 12px;
+	margin-bottom: 10px;
+}
+
+#submenu ul {
+	list-style-type: none;
+}
+#subcontent {
+	padding-left: 20px;
+}
+#subcontent h1 {
+	color: #999;
+	border-bottom: solid 1px #999;
+}
+
+
+#submenu ul li
+{
+	margin-bottom:10px;
+	font-size: 12px;
+}
+#submenu ul li a {
+	text-decoration: none;
+	color: blue;
+	
+}
+
+#submenu ul li a:hover {
+	text-decoration: underline;
+}
+
+#submenu ul li a.active_link
+{
+	font-weight:bold;
+	font-size-adjust: 0.6;
+}
+
+
+.imagebanner {
+	border: 10px solid #ffffff;
+	width: 1011px;
+}
+.backgroundimage {
+	width: 20px;
+	height: 30px;
+}
+.social_media_icon {
+	padding-top: 10px;
+	width: 25px;
+	top: 70px;
+	margin-right: 0px;
+}
+#web_container {
+	background-color: #fff;
+}
+body {
+	background-color: #efefef;
+}
+#my_menu {
+	padding: 10;
+	padding-right: 50px;
+}
+.table {
+	border-bottom: #000000 1px solid;
+
+}
+
+#my_menu a {
+	margin-right: 50px;
+	text-decoration: none;
+	color: #ffffff;
+	font-family: "Comic Sans MS", cursive;
+	font-size: 10px;
+	font-variant: 10;
+	text-align: justify;
+}
+#footer {
+	padding: 10;
+	padding-right: 50px;
+}
+.logo {
+	width: 50px;
+	padding: 2;
+}
+
+#footer a {
+	color: #ffffff;
+	font-size: 12px;
+}
+.seminar {
+	width: 200px;
+}
+
+.welcome {
+	font-family: "Arial Black", Gadget, sans-serif;
+	color: #b73e00;
+	text-align: center;
+}

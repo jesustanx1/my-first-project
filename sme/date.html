@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<h1>Working with Date</h1>
+<label>Date:</label>
+<input type="text" id="mydate" name="mydate" />
+<input type="button" value="Validate Date" onclick="val_date_click()" />
+<small>Please enter date using format yyyy-mm-dd e.g 2018-09-30</small>
+<script language="javascript">
+	function val_date_click()
+	{
+		var t_mydate=document.getElementById('mydate').value;
+		/*
+			1. Check to see if t_mydate contains something. If it does not contain anything, raisean alarm.
+		*/
+		if(t_mydate=='')
+		{
+			alert("Please enter a date!");
+			return null;
+		}
+		/*
+			2.Our lenght of our date format is 10 characters. We need to validate this too.
+		*/
+		if(t_mydate.length!=10)/* .length gets the number of characters store in a string variables*/
+		{
+			alert("Please enter a valid date using the format described!");
+			document.getElementById('mydate').focus;
+			return null;
+		}
+		/*
+			3. Separate the year, month and day into three variables
+		*/
+		var myyear, mymonth,myday,delimeter1,delimeter2;
+		myyear=t_mydate.substr(0,4);
+		mymonth=t_mydate.substr(5,2);
+		myday=t_mydate.substr(8,2);
+		mydelimeter1=t_mydate.substr(4,1);
+		mydelimeter2=t_mydate.substr(7,1);
+		
+		if(isNaN(myyear) || isNaN(mymonth) || isNaN(myday) || myyear.length!=4 || mymonth.length!=2 || myday.length!=2)
+		{
+			alert("invalid year,month or day. Please enter a valid date using the format ");
+			document.getElementById('mydate').focus();
+			return null;
+		}
+		if(mymonth>12)
+		{
+			
+			alert("invalid month. Month in a Year cannot be greater than 12. Please enter a valid date using the format ");
+			document.getElementById('mydate').focus();
+			return null;
+		}
+		if(myday>31)
+		{
+			
+			alert("invalid day. Days in a month cannot be greater than 31.Please enter a valid date using the format ");
+			document.getElementById('mydate').focus();
+			return null;
+		}
+		
+		if(mymonth==9 || mymonth==11 || mymonth==6 || mymonth==4)
+		{
+			if(myday>30)
+			{
+				alert("invalid day. Days in April, June, Semptember and November cannot be greater than 30. Please enter a valid date using the format ");
+				document.getElementById('mydate').focus();
+				return null;
+			}
+		}
+		if(mymonth==2)
+		{
+			if(myyear%4==0)
+		{
+			if(myday>29)
+		{
+			alert("invalid day. Days in Feb. Please enter a valid date using the format ");
+				document.getElementById('mydate').focus();
+				return null;
+		}
+		}
+		else
+		{
+			if(myday>28)
+			{
+				alert("invalid day. Days in February cannot be greater than 28. Please enter a valid date using the format ");
+				document.getElementById('mydate').focus();
+				return null;
+			}
+		}
+		}
+		alert("This is a valid date!");
+	}
+</script>
+</body>
+</html>

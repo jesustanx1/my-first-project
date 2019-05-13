@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>time</title>
+</head>
+
+<body>
+<h1>Working with Time</h1>
+<label>Time:</label>
+<input type="text" id="time" name="time" />
+<select id="mytime" name="mytime">
+<option value="AM">AM</option>
+<option value="PM">PM</option>
+</select>
+<input type="button" value="Validate Time" onclick="val_time_click()" />
+<small>Please enter Time using format hh:mm:ss e.g 11:59:59</small>
+<script language="javascript">
+	function val_time_click()
+	{
+		var t_time=document.getElementById('time').value;
+		if (t_time=='')
+		{
+			alert("Please enter a Time!");
+			return null;
+		}
+		if(t_time.length!==8)
+		{
+			alert("Please enter a valid Time using the format described!");
+			document.getElementById('time').focus;
+			return null;
+		}
+		var hh,mm,ss,delimeter1,delimeter2;
+		hh=t_time.substr(0,2);
+		mm=t_time.substr(3,2);
+		ss=t_time.substr(6,2);
+		delimeter1=t_time.substr(2,1);
+		delimeter2=t_time.substr(5,1);
+		
+		if(isNaN(hh) || isNaN(mm) || isNaN(ss) || hh.length!=2 || mm.length!=2 || ss.length!=2)
+		{
+			alert("invalid hour,minute or second. Please enter a valid time using the format described! ");
+			document.getElementById('time').focus();
+			return null;
+		}
+		if(delimeter1!==':' || delimeter2!==':') 
+		{ 
+			alert("invalid time format. Please enter a valid time using the format described! ");
+			document.getElementById('time').focus();
+			return null;
+		}
+		if(hh>12)
+		{
+			alert("Invalid Time. Hour cannot be greater than 12. Please enter a valid time using the format ");
+			document.getElementById('time').focus();
+			return null;
+		}
+		if(mm>59)
+		{
+			alert("Invalid Time .Minute cannot be greater than 59. Please enter a valid time using the format ");
+			document.getElementById('time').focus();
+			return null;
+		}
+		if(ss>59)
+		{
+			alert("Invalid Time. Seconds cannot be greater than 59. Please enter a valid time using the format ");
+			document.getElementById('time').focus();
+			return null;
+		}
+		alert("This is a valid Time!");
+	}
+</script>
+</body>
+</html>

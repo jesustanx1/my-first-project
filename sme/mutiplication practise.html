@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+	<div id="ans">
+    </div>
+    <script language="javascript">
+	var b='';
+	var row,col,ans;
+	b=b + '<table border="1" cellpadding="2">';
+	b=b + '<tr>';
+	b=b + '<td colspan="20">MULTIPLICATION TABLE</td>';
+	b=b + '</tr>';
+	
+	b=b + '<tr>';
+	b=b + '<td></td>';
+	for(col=2; col<=20; col++)
+	{
+		b=b + '<td><b>' + col + '</b></td>';
+	}
+	b=b + '</tr>';
+	 for(row=2; row<=12; row++)
+	 {
+		 b=b + '<tr>';
+		 b=b + '<td><b>' + row + '</b></td>';
+		 for( col=2; col<=20; col++)
+		 {
+			 ans=row * col;
+			 b=b + '<td>' + ans + '</td>';
+		 }
+		 b=b + '</tr>';
+	 }
+	b=b + '</table>';
+	document.getElementById('ans').innerHTML=b;
+	
+    </script>
+</body>
+</html>

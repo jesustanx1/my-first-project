@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+	<label>Enter number:</label>
+	<input type="text" id="numb" name="numb" />
+    <input type="button" value="Generate Permutation!" onclick="generate_perm()" /> 
+     <div id="ans">
+     </div>
+    <script language="javascript">
+	function generate_perm()
+    {
+   	 var a=document.getElementById('numb').value;
+	 var b=0;
+	 var c=1;
+	 var ans;
+	 
+	 if(a=='' || isNaN(a))
+	 {
+		 alert("Enter a number!");
+		 document.getElementById('numb').focus();
+		 return null;
+	 }
+	 
+	 ans=a + '! = '; 
+	 
+	 for(b=a; b>=1; b--)
+	 {
+		 c=c*b;
+		 ans= ans + b + ' x ';
+	 }
+	 ans= ans + ' = ' + c;
+	 document.getElementById('ans').innerHTML=ans;
+    }
+    </script>
+</body>
+</html>

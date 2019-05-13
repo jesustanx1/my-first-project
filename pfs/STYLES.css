@@ -1,0 +1,81 @@
+@charset "utf-8";
+BODY {
+	font-family: "Century Gothic", Georgia, "Times New Roman", Times, serif;
+	font-size: 16px;
+	background-image: url(images/background.jpg);
+	margin:0px;
+	padding:0px; 
+	line-height:28px;
+}
+.social_media_icon {
+	width: 50px;
+	padding-top: 10px;
+}
+
+.top_heading {
+	min-height: 30px;
+
+	background-color: #481F25
+#;
+	background-color: #ff5a00;
+}
+#footer {
+	padding: 50px;
+}
+
+#web_container {
+	background-color: #ffffff;
+	border-right: #cdcdcd 1px solid;
+}
+#footer a:hover {
+}
+.heading {
+	color: #cd8500;
+}
+
+.gallery img {
+	width: 115px;
+	height: 145px;
+	border: 2px solid #cd8500;
+}
+
+
+#my_menu {
+	padding: 10px;
+	padding-right: 50px;
+}
+#my_menu a {
+	text-decoration: none;
+	color: #ffffff;
+	margin-right: 30px;
+	font-weight: normal;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-style: normal;
+	font-size: 14px;
+}
+#footer a {
+	text-decoration: none;
+	color: #000000;
+	font-size: 12px;
+	padding-right: 10px;
+	margin-right: 5px;
+	text-align: center;
+	padding-left:2px solid #ffffff;
+}
+
+#my_menu a:hover {
+	text-decoration: underline;
+	font-weight: bold;
+	;
+}
+.green_color
+{color:#00bb00;
+}
+.green_bg
+{
+	background-color:#00bb00;
+	}
+	.font-size14
+	{
+		font-size:14px;
+		}

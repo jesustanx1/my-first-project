@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>game exercise</title>
+</head>
+
+<body>
+<script language="javascript">
+function get_random(min_b, max_b)
+	
+{	
+	
+	 var b=Math.random() * (max_b-min_b) + min_b;
+	 b=Math.round(b)
+	 return b ;
+}
+	var first_no=get_random(1,20);
+	var second_no=get_random(1,20);
+	var sum= first_no + second_no;
+	var product= first_no * second_no;
+</script>
+	<p align="center">I am thinking of two numbers between 1 and 20 Their sum is <script language="javascript">document.write(sum)</script>.
+	Their product is <script language="javascript">document.write(product)</script>.<br />
+	<b>What are the numbers?(Please enter the numbers in the space provided)</b>
+    </p>
+    <p align="center">
+    First Number=<input type="text" name="number1" id="number1" />
+    Second Number=<input type="text" name="number2" id="number2" /><br />
+    <input type="button" value="Check My Answer" onclick="check_my_answer_click()" />
+    </p>
+    <script language="javascript">
+    function check_my_answer_click()
+	{
+		var first_number= document.getElementById('number1').value;
+		var second_number= document.getElementById('number2').value;
+		if(first_number=='' || isNaN(first_number))
+		{
+			alert("Please enter a number between 1 and 20!");
+			document.getElementById('number1').focus();
+			return null;
+		}
+		if(second_number=='' || isNaN(second_number))
+		{
+			alert("Please enter a number between 1 and 20!");
+			document.getElementById('number2').focus();
+			return null;
+		}
+		if((first_number==first_no || first_number==second_no) &&(second_number==second_no || second_number==first_no))
+		{
+			alert("Congratulations!\n\nYou got it right");
+		}
+		else
+		{
+			alert("Sorry,You got it wrong. Try again!");
+		}
+		
+	}
+	</script>
+</body>
+</html>

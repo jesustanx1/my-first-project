@@ -1,0 +1,17 @@
+.css {
+}
+.socialmedia_icons {
+	width: 50px;
+	padding: 10px;
+}
+#my_menu {
+	padding: 10px;
+	padding-right: 60px;
+}
+#my_menu a {
+	text-decoration: none;
+	color: #ffffff;
+	margin-right: 50px;
+}
+#my_menu a:hover {
+}

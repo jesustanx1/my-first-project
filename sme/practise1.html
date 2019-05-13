@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>practise1</title>
+</head>
+
+<body>
+	<input id="num1" name="num1" type="text" style="width:60px" />
+	<select id="operators" name="operators">
+    <option value="+">+</option>
+    <option value="-">-</option>
+    <option value="*">*</option>
+    <option value="/">/</option>
+</select>
+<input id="num2" name="num2" type="text" style="width:60px" />
+    <input type="button" value="=" onclick="addition()" />
+    <input id="ans" name="ans" type="text" style="width:60px" />
+<script language="javascript">
+		function addition()
+		{
+			var a= document.getElementById('num1').value*1;
+			var b= document.getElementById('num2').value*1;
+			var operators= document.getElementById('operators').value;
+			var add= a + b;
+			var subt= a - b;
+			var mul= a * b;
+			var div= a / b;
+			
+		if(operators=='+')
+		{
+			document.getElementById('ans').value=add;
+			return null;
+		}
+		if(operators=='-')
+		{
+			document.getElementById('ans').value=subt;
+			return null;
+		}
+		if(operators=='*')
+		{
+			document.getElementById('ans').value=mul;
+			return null;
+		}
+		if (operators=='/')
+		{
+			document.getElementById('ans').value=div;
+			return null;
+		}
+		}
+    </script>
+</body>
+</html>

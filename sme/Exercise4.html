@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Exercise4</title>
+</head>
+
+<body>
+	<input type="number" id="inp" placeholder="Enter a number!" />
+    <input type="button" value="check number" onclick="check_number()" />
+    <script language="javascript">
+	function check_number()
+	{
+		var a= document.getElementById('inp').value
+		if(a=='' || isNaN(a))
+		{
+			alert("Please enter a numnber");
+			document.getElementById('inp').focus()
+			return null;
+		}
+		if(isprime(a)==true)
+		{
+			alert("This is prime nuumber");
+			
+		}
+		else
+		{
+			alert("This is not a prime number");
+		}
+	}
+	
+	function isprime(number)
+	{
+			var c=number;
+			var b=2;
+			var prime=true;
+			
+			
+			while(b<c)
+			{
+					if(c%b==0)
+					{
+						prime=false;
+						break;
+					}
+					b=b+1;
+			}
+			return prime;
+		}
+	</script>
+</body>
+</html>

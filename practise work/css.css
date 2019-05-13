@@ -1,0 +1,43 @@
+link {
+
+}
+.top_heading {
+	background-color: #ff5a00;
+}
+.social_media_icon {
+	width: 50px;
+	padding-top: 10px;
+}
+#my_menu {
+	padding: 10px;
+	padding-left: 50px;
+}
+#Footer {
+	padding: 10px;
+}
+
+#my_menu a {
+	margin-right: 30px;
+	color: #ffffff;
+	text-decoration: none;
+}
+#Footer a {
+	text-decoration: none;
+	color: #00000;
+}
+
+
+
+
+body {
+	background-image: url(images/background.jpg);
+}
+#Footer a:hover {
+	text-decoration: underline;
+	font-weight: 20;
+}
+
+#my_menu a:hover {
+	text-decoration: underline;
+	font-weight: bold;
+}
